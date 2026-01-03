@@ -1,0 +1,379 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050812;
+  color: #e6f1ff;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND GRID */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(#00f7ff22 1px, transparent 1px),
+    linear-gradient(90deg, #00f7ff22 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at top, black 40%, transparent 75%);
+  z-index: -1;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #00f7ff;
+  text-shadow: 0 0 30px #00f7ff;
+}
+
+.hero p {
+  margin-top: 8px;
+  letter-spacing: 3px;
+  color: #9bdcff;
+}
+
+.typing {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: #7fffd4;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.85rem; /* ⬆ texto maior */
+  letter-spacing: 3px;
+  color: #7fffd4;
+  opacity: 0.95;
+  transition: 0.6s;
+}
+
+.scroll-indicator span {
+  text-shadow: 
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff;
+}
+
+/* SETA MAIOR */
+.arrow {
+  width: 22px;      /* ⬆ maior */
+  height: 22px;     /* ⬆ maior */
+  border-right: 3px solid #00f7ff;
+  border-bottom: 3px solid #00f7ff;
+  transform: rotate(45deg);
+  animation: arrowMove 1.5s infinite;
+  box-shadow: 
+    0 0 15px #00f7ff,
+    0 0 30px #00f7ff55;
+}
+
+
+/* ANIMAÇÃO */
+@keyframes arrowMove {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(18px) rotate(45deg); /* ⬆ movimento maior */
+  }
+}
+/* SECTIONS */
+.section {
+  padding: 100px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 2rem;
+  color: #00f7ff;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: rgba(15, 25, 45, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 26px;
+  border: 1px solid #00f7ff33;
+  transition: 0.4s;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(120deg, transparent, #00f7ff33, transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 40px #00f7ff55;
+}
+
+/* TAG */
+.tag {
+  font-size: 0.65rem;
+  color: #00f7ff;
+  border: 1px solid #00f7ff88;
+  padding: 3px 9px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  color: #eaffff;
+  text-shadow: 0 0 10px #00f7ff55;
+}
+
+.card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #cfe8ff;
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.75rem;
+  color: #6faaff;
+}
+/* WRAPPER */
+.github-wrapper {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* SINALIZAÇÃO */
+.github-signal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: #7fffd4;
+  animation: signalPulse 2s infinite;
+}
+
+.github-signal span {
+  text-shadow:
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff;
+}
+
+/* SETA DE SINALIZAÇÃO */
+.signal-arrow {
+  margin-top: 6px;
+  width: 18px;
+  height: 18px;
+  border-right: 3px solid #00f7ff;
+  border-bottom: 3px solid #00f7ff;
+  transform: rotate(45deg);
+  animation: signalMove 1.6s infinite;
+  box-shadow: 0 0 18px #00f7ff;
+}
+
+/* BOTÃO GITHUB (MAIS FORTE) */
+.github-link {
+  padding: 16px 48px;
+  border-radius: 50px;
+  border: 2px solid #00f7ff;
+  color: #00f7ff;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  text-shadow: 0 0 14px #00f7ff;
+  box-shadow:
+    0 0 30px #00f7ff88,
+    inset 0 0 15px #00f7ff33;
+  transition: 0.4s;
+  position: relative;
+}
+
+/* HOVER */
+.github-link:hover {
+  color: #eaffff;
+  transform: scale(1.08);
+  box-shadow:
+    0 0 45px #00f7ff,
+    inset 0 0 25px #00f7ff55;
+}
+
+/* ANIMAÇÕES */
+@keyframes signalMove {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(14px) rotate(45deg);
+  }
+}
+
+@keyframes signalPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* FOOTER GITHUB */
+.footer-github {
+  padding: 80px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  background: radial-gradient(circle at top, #0a1228, #050812);
+  border-top: 1px solid #00f7ff33;
+}
+
+/* SINALIZAÇÃO FINAL */
+.github-final-signal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: #7fffd4;
+  animation: signalPulse 2s infinite;
+}
+
+.github-final-signal span {
+  text-shadow:
+    0 0 12px #00f7ff,
+    0 0 24px #00f7ff;
+}
+
+/* SETA */
+.signal-arrow {
+  margin-top: 10px;
+  width: 22px;
+  height: 22px;
+  border-right: 3px solid #00f7ff;
+  border-bottom: 3px solid #00f7ff;
+  transform: rotate(45deg);
+  animation: signalMove 1.6s infinite;
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* BOTÃO GITHUB FINAL */
+.github-link-final {
+  padding: 18px 56px;
+  border-radius: 60px;
+  border: 2px solid #00f7ff;
+  color: #00f7ff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: 6px;
+  font-weight: 600;
+  text-shadow: 0 0 16px #00f7ff;
+  box-shadow:
+    0 0 35px #00f7ff88,
+    inset 0 0 18px #00f7ff33;
+  transition: 0.4s;
+}
+
+.github-link-final:hover {
+  color: #eaffff;
+  transform: scale(1.1);
+  box-shadow:
+    0 0 55px #00f7ff,
+    inset 0 0 30px #00f7ff55;
+}
+
+/* TEXTO FINAL */
+.footer-text {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #6faaff;
+  opacity: 0.8;
+}
+
+/* ANIMAÇÕES (REUTILIZA) */
+@keyframes signalMove {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(16px) rotate(45deg);
+  }
+}
+
+@keyframes signalPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
