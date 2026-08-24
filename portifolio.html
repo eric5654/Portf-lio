@@ -2,108 +2,458 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Eric Almeida | Desenvolvedor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eric Almeida | Desenvolvedor de Sistemas</title>
+
+  <meta
+    name="description"
+    content="Eric Almeida — Desenvolvedor de Sistemas especializado em aplicações modernas, APIs, bancos de dados e interfaces web."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- BACKGROUND -->
+  <!-- FUNDO -->
   <div class="bg-grid"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
 
-  <!-- HERO -->
+  <!-- HEADER -->
   <header class="hero">
-    <h1>ERIC ALMEIDA</h1>
-    <p>DESENVOLVEDOR DE SISTEMAS</p>
-    <div class="typing" id="typing"></div>
 
-    <!-- INDICADOR DE SCROLL -->
-    <div class="scroll-indicator" id="scrollIndicator">
-      <span>ROLE PARA BAIXO</span>
-      <div class="arrow"></div>
+    <div class="hero-content">
+
+      <div class="status">
+        <span class="status-dot"></span>
+        DISPONÍVEL PARA PROJETOS
+      </div>
+
+      <p class="hero-small">
+        DESENVOLVEDOR DE SISTEMAS
+      </p>
+
+      <h1>
+        ERIC <span>ALMEIDA</span>
+      </h1>
+
+      <div class="hero-line"></div>
+
+      <p class="typing" id="typing"></p>
+
+      <p class="hero-description">
+        Desenvolvimento de aplicações modernas, sistemas web,
+        APIs e soluções digitais escaláveis.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#projetos" class="btn btn-primary">
+          VER PROJETOS
+          <span>→</span>
+        </a>
+
+        <a
+          href="https://github.com/eric5654"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          GITHUB
+          <span>↗</span>
+        </a>
+
+      </div>
+
     </div>
+
+    <!-- SCROLL -->
+    <a href="#stack" class="scroll-indicator" id="scrollIndicator">
+
+      <span>ROLE PARA BAIXO</span>
+
+      <div class="arrow"></div>
+
+    </a>
+
   </header>
 
+
+  <!-- SOBRE -->
+  <section class="section about hidden">
+
+    <div class="section-header">
+
+      <span class="section-number">01</span>
+
+      <div>
+        <p class="section-label">QUEM SOU</p>
+        <h2>DESENVOLVEDOR<br><span>DE SOLUÇÕES</span></h2>
+      </div>
+
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-text">
+
+        <p>
+          Sou desenvolvedor de sistemas focado na criação de
+          aplicações modernas, funcionais e escaláveis.
+        </p>
+
+        <p>
+          Trabalho com desenvolvimento front-end, back-end,
+          bancos de dados e arquitetura de sistemas, buscando
+          transformar problemas reais em soluções digitais eficientes.
+        </p>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>∞</strong>
+            <span>IDEIAS</span>
+          </div>
+
+          <div class="stat">
+            <strong>10+</strong>
+            <span>TECNOLOGIAS</span>
+          </div>
+
+          <div class="stat">
+            <strong>100%</strong>
+            <span>DEDICAÇÃO</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="terminal">
+
+        <div class="terminal-header">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="terminal-body">
+
+          <p>
+            <span class="terminal-green">eric@dev</span>:~$
+            <span class="terminal-white">whoami</span>
+          </p>
+
+          <p class="terminal-output">
+            Desenvolvedor de Sistemas
+          </p>
+
+          <p>
+            <span class="terminal-green">eric@dev</span>:~$
+            <span class="terminal-white">skills</span>
+          </p>
+
+          <p class="terminal-output">
+            Java • Python • JavaScript<br>
+            React • Node.js • Laravel<br>
+            SQL • PHP • C • C++ • C#
+          </p>
+
+          <p>
+            <span class="terminal-green">eric@dev</span>:~$
+            <span class="cursor">_</span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- STACK -->
-  <section class="section hidden">
-    <h2>STACK TECH</h2>
+  <section class="section hidden" id="stack">
+
+    <div class="section-header">
+
+      <span class="section-number">02</span>
+
+      <div>
+        <p class="section-label">TECNOLOGIAS</p>
+        <h2>STACK<br><span>TECH</span></h2>
+      </div>
+
+    </div>
 
     <div class="cards">
-      <div class="card">
+
+      <article class="card">
+
+        <div class="card-icon">01</div>
+
         <span class="tag">FRONT-END</span>
+
         <h3>Interfaces Modernas</h3>
-        <p>HTML, CSS, JavaScript e React.js para aplicações rápidas e responsivas.</p>
-      </div>
 
-      <div class="card">
+        <p>
+          Interfaces rápidas, responsivas e modernas .
+        </p>
+
+        <div class="tech-list">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+          <span>REACT</span>
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">02</div>
+
         <span class="tag">BACK-END</span>
-        <h3>Serviços e APIs</h3>
-        <p>Node.js, PHP e Laravel aplicados em sistemas robustos.</p>
-      </div>
 
-      <div class="card">
+        <h3>APIs & Serviços</h3>
+
+        <p>
+          Desenvolvimento de APIs e sistemas robustos.
+        </p>
+
+        <div class="tech-list">
+          <span>NODE</span>
+          <span>PHP</span>
+          <span>LARAVEL</span>
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">03</div>
+
         <span class="tag">LINGUAGENS</span>
-        <h3>Programação Avançada</h3>
-        <p>Java, Python, C e JavaScript com foco em desempenho.</p>
-      </div>
 
-      <div class="card">
-        <span class="tag">BANCO DE DADOS</span>
-        <h3>Modelagem e SQL</h3>
-        <p>Consultas eficientes, normalização e estrutura de dados.</p>
-      </div>
+        <h3>Programação</h3>
+
+        <p>
+          Experiência com diferentes paradigmas de programação
+          e desenvolvimento de soluções eficientes.
+        </p>
+
+        <div class="tech-list">
+          <span>JAVA</span>
+          <span>PYTHON</span>
+          <span>C++</span>
+          <span>C#</span>
+          <span>JS</span>
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">04</div>
+
+        <span class="tag">DATABASE</span>
+
+        <h3>Dados & SQL</h3>
+
+        <p>
+          Modelagem, consultas, relacionamentos e estruturas
+          de dados para aplicações escaláveis.
+        </p>
+
+        <div class="tech-list">
+          <span>SQL</span>
+          <span>POSTGRES</span>
+          <span>MYSQL</span>
+        </div>
+
+      </article>
+
     </div>
+
   </section>
+
 
   <!-- PROJETOS -->
-  <section class="section hidden">
-    <h2>PROJETOS</h2>
+  <section class="section projects hidden" id="projetos">
 
-    <div class="cards">
-      <div class="card">
-        <span class="tag">WEB APP</span>
-        <h3>Sistema de Gestão</h3>
-        <p>Aplicação web com autenticação, CRUD e banco de dados SQL.</p>
+    <div class="section-header">
+
+      <span class="section-number">03</span>
+
+      <div>
+        <p class="section-label">PORTFÓLIO</p>
+        <h2>PROJETOS<br><span>SELECIONADOS</span></h2>
       </div>
 
-      <div class="card">
-        <span class="tag">API</span>
-        <h3>API REST</h3>
-        <p>API em Node.js com arquitetura modular e segurança.</p>
-      </div>
-
-      <div class="card">
-        <span class="tag">FRONT-END</span>
-        <h3>Dashboard Tech</h3>
-        <p>Interface futurista responsiva com UX moderna.</p>
-      </div>
     </div>
+
+
+    <div class="project-grid">
+
+      <article class="project-card">
+
+        <div class="project-number">01</div>
+
+        <div class="project-content">
+
+          <span class="tag">WEB APP</span>
+
+          <h3>Sistema de Gestão</h3>
+
+          <p>
+            Sistema web para gerenciamento de chamados,
+            autenticação de usuários e controle de solicitações.
+          </p>
+
+          <div class="project-tech">
+            <span>REACT</span>
+            <span>SUPABASE</span>
+            <span>SQL</span>
+          </div>
+
+          <a
+            href="https://github.com/eric5654/sistema-gestao-chamados"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            VER PROJETO →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="project-card">
+
+        <div class="project-number">02</div>
+
+        <div class="project-content">
+
+          <span class="tag">API</span>
+
+          <h3>API REST</h3>
+
+          <p>
+            Arquitetura de API para comunicação entre aplicações,
+            com organização modular e foco em segurança.
+          </p>
+
+          <div class="project-tech">
+            <span>NODE.JS</span>
+            <span>REST</span>
+            <span>SQL</span>
+          </div>
+
+          <a
+            href="https://github.com/eric5654"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            VER PROJETOS →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="project-card">
+
+        <div class="project-number">03</div>
+
+        <div class="project-content">
+
+          <span class="tag">FRONT-END</span>
+
+          <h3>Dashboard Tech</h3>
+
+          <p>
+            Dashboard futurista e responsivo desenvolvido
+            com foco em experiência do usuário.
+          </p>
+
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JAVASCRIPT</span>
+          </div>
+
+          <a
+            href="https://github.com/eric5654"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            VER PROJETOS →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
   </section>
 
-  <!-- FOOTER COM GITHUB (CTA FINAL) -->
+
+  <!-- CTA FINAL -->
   <footer class="footer-github hidden">
 
-    <div class="github-final-signal">
-      <span>VEJA TODOS OS PROJETOS NO GITHUB</span>
-      <div class="signal-arrow"></div>
-    </div>
+    <div class="footer-line"></div>
 
-    <a 
-      href="https://github.com/eric5654" 
-      target="_blank" 
+    <p class="footer-label">
+      PRÓXIMA MISSÃO
+    </p>
+
+    <h2>
+      VAMOS CRIAR ALGO<br>
+      <span>INCRÍVEL?</span>
+    </h2>
+
+    <p class="footer-description">
+      Explore meus projetos, códigos e experiências.
+    </p>
+
+    <a
+      href="https://github.com/eric5654"
+      target="_blank"
+      rel="noopener noreferrer"
       class="github-link-final"
     >
-      GITHUB • ERIC5654
+      <span>GITHUB</span>
+      <strong>ERIC5654 ↗</strong>
     </a>
 
     <p class="footer-text">
-      © 2026 • Eric Almeida • Desenvolvedor de Sistemas
+      © 2026 Eric Almeida • Desenvolvedor de Sistemas
     </p>
 
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
-
